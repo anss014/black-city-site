@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black City Server</title>
+    <style>
+        body { background: #0c0c0c; color: #fff; font-family: sans-serif; margin: 0; padding: 0; }
+        .container { max-width: 400px; margin: 100px auto; background: #151515; padding: 30px; border-radius: 10px; border-top: 4px solid #ff3c00; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        input { width: 90%; padding: 12px; margin: 10px 0; background: #222; border: 1px solid #333; color: #fff; border-radius: 5px; outline: none; }
+        button { width: 95%; padding: 15px; background: #ff3c00; border: none; color: #fff; font-weight: bold; border-radius: 5px; cursor: pointer; text-transform: uppercase; margin-top: 10px; }
+        button:active { background: #c0392b; }
+        h2 { letter-spacing: 2px; }
+        .nav { padding: 20px; text-align: center; background: #111; }
+        .nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <a href="index.html">Басты бет</a>
+    <a href="forum.html">Форум</a>
+</div>
+
+<div class="container">
+    <h2>ТІРКЕЛУ</h2>
+    <input type="text" id="u_nick" placeholder="Ойын никнеймі">
+    <input type="email" id="u_mail" placeholder="Электронды пошта">
+    <input type="password" id="u_pass" placeholder="Құпия сөз">
+    <button type="button" onclick="saylem()">ТІРКЕЛУ</button>
+</div>
+
+<script>
+    // Тіркелу функциясы
+    function saylem() {
+        var n = document.getElementById('u_nick').value;
+        var m = document.getElementById('u_mail').value;
+        var p = document.getElementById('u_pass').value;
+
+        if (n == "" || m == "" || p == "") {
+            alert("Барлық жолақты толтыр, бауырым!");
+        } else {
+            // Мәліметті сақтау
+            var user = { nick: n, email: m };
+            localStorage.setItem('currentUser', JSON.stringify(user));
+            
+            alert("Құттықтаймыз, " + n + "! Сен тіркелдің.");
+            
+            // Форумға жіберу (опционально)
+            // window.location.href = "forum.html";
+        }
+    }
+
+    // Оң жақ батырманы блоктау
+    document.addEventListener('contextmenu', e => e.preventDefault());
+</script>
+
+</body>
+</html>
