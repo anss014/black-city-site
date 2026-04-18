@@ -1,99 +1,120 @@
 <!DOCTYPE html>
 <html lang="kk">
 <head>
-  <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black City - Меню</title>
+    <title>Black City RolePlay</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            /* Нағыз Black Russia стиліндегі фон */
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
-                        url('https://sun9-23.userapi.com/impg/c858220/v858220935/195392/x_W-Gz_Z6vI.jpg?size=1280x720&quality=96&sign=c925823565e019323c626c7100780f2d&type=album');
+            background: #0b0b0b;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        /* Фондағы сурет (кейіпкерлермен) */
+        .hero-section {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1), #0b0b0b), 
+                        url('https://blackrussia.online/assets/img/main-bg.jpg'); /* Ресми фон */
             background-size: cover;
             background-position: center;
-            height: 100vh;
+            height: 70vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            font-family: 'Arial Black', sans-serif;
+            justify-content: flex-start;
+            padding-top: 20px;
         }
 
-        h1 {
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        /* Ойнау батырмасы (Ақ жиекпен) */
+        .play-btn {
+            border: 2px solid white;
+            background: rgba(255, 255, 255, 0.1);
             color: white;
-            font-size: 32px;
+            padding: 12px 60px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
             text-transform: uppercase;
-            margin-bottom: 40px;
-            text-shadow: 0 0 15px rgba(243, 156, 18, 0.7);
+            margin-top: 150px; /* Суреттегідей төменірек қоямыз */
+            transition: 0.3s;
         }
 
-        .menu-container {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .big-btn {
-            width: 85%;
-            max-width: 350px;
-            padding: 20px;
-            background: #f39c12; /* Сарғыш түс */
+        .play-btn:hover {
+            background: white;
             color: black;
-            text-align: center;
-            text-decoration: none;
-            font-size: 22px;
+        }
+
+        /* Негізгі тақырыптар */
+        .main-title {
+            margin-top: 30px;
+            font-size: 35px;
             font-weight: 900;
-            border-radius: 15px;
-            border: 3px solid #e67e22;
             text-transform: uppercase;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.6);
-            transition: 0.2s;
         }
 
-        .big-btn:hover {
-            transform: scale(1.05);
-            background: #ffae00;
-            box-shadow: 0 0 25px rgba(243, 156, 18, 0.5);
+        .orange-text {
+            color: #ff4500;
         }
 
-        .play {
-            background: #f39c12;
-        }
-
-        .forum {
-            background: #f39c12;
-        }
-
-        .shop {
-            background: #f39c12;
-        }
-
-        /* Төмендегі "Шығу" батырмасы */
-        .exit-link {
-            margin-top: 40px;
-            color: #777;
-            text-decoration: none;
+        .description {
+            padding: 0 20px;
             font-size: 14px;
+            color: #aaa;
+            line-height: 1.6;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        /* Төменгі мәзір (Форум, Дүкен) */
+        .bottom-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .nav-item {
+            color: #ff4500;
+            text-decoration: none;
+            font-weight: bold;
             text-transform: uppercase;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
-    <h1>БАСТЫ МӘЗІР</h1>
+    <div class="hero-section">
+        <div style="font-weight: bold; font-size: 24px;">
+            <span style="color: white;">BLACK</span> <span style="color: #ff4500;">CITY</span>
+        </div>
 
-    <div class="menu-container">
-        <a href="forum.html" class="big-btn">ФОРУМ</a>
-        <a href="#" class="big-btn" onclick="alert('Дүкен жақында ашылады!')">ДҮКЕН</a>
-        <a href="#" class="big-btn play" onclick="alert('Лаунчер дайындалуда...')">ОЙНАУ</a>
+        <a href="#" class="play-btn" onclick="alert('Жүктелуде...')">Играть</a>
     </div>
 
-    <a href="index.html" class="exit-link">Артқа қайту</a>
+    <div class="main-title">
+        <span class="orange-text">BLACK</span> CITY
+    </div>
+
+    <p class="description">
+        Ролевая игра, где ты решаешь, кем быть: одиночкой или лидером, героем или теневым боссом. 
+        Прокачивайся, собирай команду и строй репутацию. Присоединяйся к миллионам и забери своё.
+    </p>
+
+    <div class="bottom-nav">
+        <a href="forum.html" class="nav-item">Форум</a>
+        <a href="#" class="nav-item">Дүкен</a>
+        <a href="index.html" class="nav-item">Шығу</a>
+    </div>
 
 </body>
 </html>
