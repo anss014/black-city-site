@@ -3,94 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black City - Басты мәзір</title>
+    <title>Black City - Меню</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background: #000;
-            color: white;
-            font-family: 'Arial', sans-serif;
-            overflow: hidden;
-        }
-
-        /* Жоғарғы мәзір */
-        .top-nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.8);
-            border-bottom: 2px solid #f39c12;
-        }
-
-        .nav-link {
-            color: #f39c12;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-            text-transform: uppercase;
-        }
-
-        /* Басты фон */
-        .main-screen {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)), 
+            /* Нағыз Black Russia стиліндегі фон */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
                         url('https://sun9-23.userapi.com/impg/c858220/v858220935/195392/x_W-Gz_Z6vI.jpg?size=1280x720&quality=96&sign=c925823565e019323c626c7100780f2d&type=album');
             background-size: cover;
             background-position: center;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            text-align: center;
+            font-family: 'Arial Black', sans-serif;
         }
 
         h1 {
-            font-size: 40px;
-            margin: 0;
-            color: #fff;
-            text-shadow: 0 0 20px #f39c12;
+            color: white;
+            font-size: 32px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            text-shadow: 0 0 15px rgba(243, 156, 18, 0.7);
         }
 
-        .description {
-            font-size: 16px;
-            color: #ccc;
-            margin: 15px 0 30px;
-            max-width: 300px;
+        .menu-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
         }
 
-        .play-btn {
-            background: #f39c12;
+        .big-btn {
+            width: 85%;
+            max-width: 350px;
+            padding: 20px;
+            background: #f39c12; /* Сарғыш түс */
             color: black;
-            padding: 15px 50px;
-            border-radius: 30px;
+            text-align: center;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            box-shadow: 0 0 15px #f39c12;
-            transition: 0.3s;
+            font-size: 22px;
+            font-weight: 900;
+            border-radius: 15px;
+            border: 3px solid #e67e22;
+            text-transform: uppercase;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+            transition: 0.2s;
         }
 
-        .play-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 25px #f39c12;
+        .big-btn:hover {
+            transform: scale(1.05);
+            background: #ffae00;
+            box-shadow: 0 0 25px rgba(243, 156, 18, 0.5);
+        }
+
+        .play {
+            background: #f39c12;
+        }
+
+        .forum {
+            background: #f39c12;
+        }
+
+        .shop {
+            background: #f39c12;
+        }
+
+        /* Төмендегі "Шығу" батырмасы */
+        .exit-link {
+            margin-top: 40px;
+            color: #777;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
-    <div class="top-nav">
-        <a href="forum.html" class="nav-link">Форум</a>
-        <a href="#" class="nav-link">Дүкен</a>
-        <a href="index.html" class="nav-link">Шығу</a>
+    <h1>БАСТЫ МӘЗІР</h1>
+
+    <div class="menu-container">
+        <a href="forum.html" class="big-btn">ФОРУМ</a>
+        <a href="#" class="big-btn" onclick="alert('Дүкен жақында ашылады!')">ДҮКЕН</a>
+        <a href="#" class="big-btn play" onclick="alert('Лаунчер дайындалуда...')">ОЙНАУ</a>
     </div>
 
-    <div class="main-screen">
-        <h1>BLACK CITY</h1>
-        <p class="description">Өз жолыңды таңдап, криминалдық әлемнің королі бол!</p>
-        <a href="#" onclick="alert('Жақында: Black City лаунчері дайын болады!')" class="play-btn">ОЙНАУ</a>
-    </div>
+    <a href="index.html" class="exit-link">Артқа қайту</a>
 
 </body>
 </html>
