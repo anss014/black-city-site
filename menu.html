@@ -5,35 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black City RolePlay</title>
     <style>
+        /* БАРЛЫҚ CSS ОСЫ ЖЕРДЕ */
         body {
-            margin: 0;
-            padding: 0;
-            background: #0b0b0b;
-            color: white;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
+            margin: 0; padding: 0;
+            background: #0b0b0b; color: white;
+            font-family: 'Arial', sans-serif; text-align: center;
         }
-
-        /* Фондағы сурет (кейіпкерлермен) */
-        .hero-section {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.1), #0b0b0b), 
-                        url('https://blackrussia.online/assets/img/main-bg.jpg'); /* Ресми фон */
+        ..hero-section {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), #0b0b0b), 
+                        url('https://i.ytimg.com/vi/h8SOfy8xTzY/maxresdefault.jpg');
             background-size: cover;
             background-position: center;
-            height: 70vh;
+            background-repeat: no-repeat;
+            height: 65vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            padding-top: 20px;
+            padding-top: 30px;
+            background-color: #1a1a1a; 
         }
 
-        .logo {
-            width: 150px;
-            margin-bottom: 20px;
-        }
-
-        /* Ойнау батырмасы (Ақ жиекпен) */
         .play-btn {
             border: 2px solid white;
             background: rgba(255, 255, 255, 0.1);
@@ -44,77 +36,23 @@
             border-radius: 5px;
             font-weight: bold;
             text-transform: uppercase;
-            margin-top: 150px; /* Суреттегідей төменірек қоямыз */
+            margin-top: 180px;
             transition: 0.3s;
         }
-
-        .play-btn:hover {
-            background: white;
-            color: black;
-        }
-
-        /* Негізгі тақырыптар */
-        .main-title {
-            margin-top: 30px;
-            font-size: 35px;
-            font-weight: 900;
-            text-transform: uppercase;
-        }
-
-        .orange-text {
-            color: #ff4500;
-        }
-
-        .description {
-            padding: 0 20px;
-            font-size: 14px;
-            color: #aaa;
-            line-height: 1.6;
-            max-width: 500px;
-            margin: 20px auto;
-        }
-
-        /* Төменгі мәзір (Форум, Дүкен) */
-        .bottom-nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 50px;
-        }
-
-        .nav-item {
-            color: #ff4500;
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 14px;
-        }
-    </style>
-</head>
-<body>
-
     <div class="hero-section">
-        <div style="font-weight: bold; font-size: 24px;">
+        <div style="font-weight: bold; font-size: 24px; letter-spacing: 2px;">
             <span style="color: white;">BLACK</span> <span style="color: #ff4500;">CITY</span>
         </div>
-
         <a href="#" class="play-btn" onclick="alert('Жүктелуде...')">Играть</a>
     </div>
 
-    <div class="main-title">
-        <span class="orange-text">BLACK</span> CITY
-    </div>
-
-    <p class="description">
-        Ролевая игра, где ты решаешь, кем быть: одиночкой или лидером, героем или теневым боссом. 
-        Прокачивайся, собирай команду и строй репутацию. Присоединяйся к миллионам и забери своё.
-    </p>
+    <div class="main-title"><span class="orange-text">BLACK</span> CITY</div>
+    <p class="description">Ролевая игра, где ты решаешь, кем быть. Присоединяйся к миллионам и забери своё.</p>
 
     <div class="bottom-nav">
         <a href="forum.html" class="nav-item">Форум</a>
         <a href="#" class="nav-item">Дүкен</a>
         <a href="index.html" class="nav-item">Шығу</a>
     </div>
-
 </body>
 </html>
