@@ -2,29 +2,110 @@
 <html lang="kk">
 <head>
     <meta charset="UTF-8">
-    <title>Black City - Мәзір</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black City - Басты мәзір</title>
     <style>
-        body { background: #000; color: #fff; text-align: center; font-family: sans-serif; }
-        .menu-btn {
-            display: block;
-            width: 80%;
-            margin: 20px auto;
-            padding: 15px;
-            background: #f39c12; /* Сарғыш түс, Black Russia стилінде */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0b0b0b;
             color: white;
-            border: none;
-            border-radius: 10px;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Үстіңгі мәзір (Навигация) */
+        header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 10px 0;
+            border-bottom: 2px solid #f39c12;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-btn {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: #f39c12;
+            color: black;
+        }
+
+        /* Ортадағы басты бөлім */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), #0b0b0b), 
+                        url('https://sun9-23.userapi.com/impg/c858220/v858220935/195392/x_W-Gz_Z6vI.jpg?size=1280x720&quality=96&sign=c925823565e019323c626c7100780f2d&type=album');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin: 0;
+            text-transform: uppercase;
+            color: #f39c12;
+            text-shadow: 3px 3px 20px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
             font-size: 18px;
+            max-width: 600px;
+            margin-top: 15px;
+            line-height: 1.6;
+            text-shadow: 2px 2px 10px rgba(0,0,0,1);
+        }
+
+        .main-play-btn {
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: #f39c12;
+            color: black;
+            font-size: 20px;
             font-weight: bold;
             text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 0 20px rgba(243, 156, 18, 0.5);
+            transition: 0.3s;
         }
-        .menu-btn:hover { background: #e67e22; }
+
+        .main-play-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(243, 156, 18, 0.8);
+        }
     </style>
 </head>
 <body>
-    <h1>БАСТЫ МӘЗІР</h1>
-    <a href="forum.html" class="menu-btn">ФОРУМ</a>
-    <a href="shop.html" class="menu-btn">ДҮКЕН</a>
-    <a href="https://blackrussia.online" class="menu-btn">ОЙНАУ</a>
+
+    <header>
+        <a href="forum.html" class="nav-btn">Форум</a>
+        <a href="#" class="nav-btn">Дүкен</a>
+        <a href="index.html" class="nav-btn">Шығу</a>
+    </header>
+
+    <div class="hero">
+        <h1>BLACK CITY ROLEPLAY</h1>
+        <p>Криминалдық Ресей әлеміне қош келдің! Өз жолыңды таңда: заңды қорға немесе қылмыс әлемінің королі бол.</p>
+        <<a href="#" onclick="alert('Жақында: Black City лаунчері дайын болады!')" class="main-play-btn">ОЙНАУДЫ БАСТАУ</a>
+    </div>
+
 </body>
 </html>
