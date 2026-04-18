@@ -5,40 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black City RolePlay</title>
     <style>
-        /* БАРЛЫҚ CSS ОСЫ ЖЕРДЕ */
         body {
             margin: 0; padding: 0;
             background: #0b0b0b; color: white;
             font-family: 'Arial', sans-serif; text-align: center;
+            overflow-x: hidden;
         }
-        ..hero-section {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.2), #0b0b0b), 
-                        url('https://i.ytimg.com/vi/h8SOfy8xTzY/maxresdefault.jpg');
-            background-size: cover;
+        .hero-section {
+            /* Мұнда жұмыс істейтін жаңа сурет сілтемесі */
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), #0b0b0b), 
+                        url('https://wallpapershome.ru/images/pages/pic_h/23565.jpg');
+            background-size: cover; 
             background-position: center;
             background-repeat: no-repeat;
-            height: 65vh;
-            display: flex;
+            height: 60vh; 
+            display: flex; 
             flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
+            align-items: center; 
+            justify-content: flex-start; 
             padding-top: 30px;
-            background-color: #1a1a1a; 
         }
-
         .play-btn {
-            border: 2px solid white;
+            border: 2px solid white; 
             background: rgba(255, 255, 255, 0.1);
-            color: white;
-            padding: 12px 60px;
+            color: white; 
+            padding: 12px 60px; 
             font-size: 18px;
-            text-decoration: none;
-            border-radius: 5px;
+            text-decoration: none; 
+            border-radius: 5px; 
             font-weight: bold;
-            text-transform: uppercase;
-            margin-top: 180px;
+            text-transform: uppercase; 
+            margin-top: 140px; 
             transition: 0.3s;
+            display: inline-block;
         }
+        .play-btn:hover { background: white; color: black; }
+        .main-title { margin-top: 20px; font-size: 32px; font-weight: 900; text-transform: uppercase; }
+        .orange-text { color: #ff4500; }
+        .description { padding: 0 20px; font-size: 14px; color: #aaa; max-width: 500px; margin: 15px auto; }
+        .bottom-nav { display: flex; justify-content: center; gap: 20px; margin-top: 20px; padding-bottom: 40px; }
+        .nav-item { color: #ff4500; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 14px; }
+    </style>
+</head>
+<body>
     <div class="hero-section">
         <div style="font-weight: bold; font-size: 24px; letter-spacing: 2px;">
             <span style="color: white;">BLACK</span> <span style="color: #ff4500;">CITY</span>
@@ -47,7 +56,7 @@
     </div>
 
     <div class="main-title"><span class="orange-text">BLACK</span> CITY</div>
-    <p class="description">Ролевая игра, где ты решаешь, кем быть. Присоединяйся к миллионам и забери своё.</p>
+    <p class="description">Бұл сенің тағдырың шешілетін әлем. Миллиондаған ойыншыларға қосыл және өз абыройыңды асқақтат!</p>
 
     <div class="bottom-nav">
         <a href="forum.html" class="nav-item">Форум</a>
@@ -55,4 +64,5 @@
         <a href="index.html" class="nav-item">Шығу</a>
     </div>
 </body>
+</html>
 </html>
