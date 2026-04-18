@@ -53,7 +53,27 @@
 
     // Оң жақ батырманы блоктау
     document.addEventListener('contextmenu', e => e.preventDefault());
-</script>
+<script>
+    function saylem() {
+        var n = document.getElementById('u_nick').value;
+        var m = document.getElementById('u_mail').value;
+        var p = document.getElementById('u_pass').value;
+
+        if (n == "" || m == "" || p == "") {
+            alert("Барлық жолақты толтыр, бауырым!");
+        } else {
+            // Мәліметті сақтау
+            var user = { nick: n, email: m };
+            localStorage.setItem('currentUser', JSON.stringify(user));
+            
+            alert("Құттықтаймыз, " + n + "! Сен тіркелдің.");
+            
+            // ОСЫ ЖОЛ САЙТТЫ ФОРУМҒА ЖІБЕРЕДІ:
+            window.location.href = "forum.html"; 
+        }
+    }
+    document.addEventListener('contextmenu', e => e.preventDefault());
+</script>>
 
 </body>
 </html>
