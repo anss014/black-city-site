@@ -75,6 +75,23 @@ window.location.href = "forum.html"; // МЫНА ЖОЛДЫ МІНДЕТТІ Т�
     }
     document.addEventListener('contextmenu', e => e.preventDefault());
 </script>>
+<script>
+    function saylem() {
+        var n = document.getElementById('u_nick').value;
+        var m = document.getElementById('u_mail').value;
+        var p = document.getElementById('u_pass').value;
 
+        if (n == "" || m == "" || p == "") {
+            alert("Барлық жолақты толтыр, бауырым!");
+        } else {
+            alert("Құттықтаймыз, " + n + "! Сен тіркелдің.");
+            
+            // ОСЫ ЖОЛ МАҢЫЗДЫ:
+            window.location.href = "forum.html"; 
+        }
+    }
+    document.addEventListener('contextmenu', e => e.preventDefault());
+</script>
+    
 </body>
 </html>
